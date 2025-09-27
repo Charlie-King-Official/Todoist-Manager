@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import os
 
 # === CONFIGURATION ===
-API_TOKEN = os.environ["TODOIST_API_KEY"]  # Stored securely in Replit Secrets
+API_TOKEN = os.getenv["TODOIST_API_KEY"]  # Stored securely in Replit Secrets
 PROJECT_NAMES = ["Julia", "Chris"]
 
 headers = {
