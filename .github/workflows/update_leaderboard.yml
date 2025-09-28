@@ -18,6 +18,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Dependencies
+        run: |
+          pip install requests
+
       - name: Get points
         run: python fetch_points.py
         env:
