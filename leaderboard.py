@@ -81,8 +81,8 @@ def main():
     --card-bg: rgba(23, 26, 33, 0.85);
     --text-color: #eaeef5;
     --muted-color: #a8b3c7;
-    --accent-julia: #7dd3fc;
-    --accent-chris: #f472b6;
+    --accent-chris: #7dd3fc;
+    --accent-julia: #f472b6;
   }}
   html, body {{
     margin: 0;
