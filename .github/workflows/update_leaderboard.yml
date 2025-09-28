@@ -27,9 +27,6 @@ jobs:
         env:
           TODOIST_API_KEY: ${{ secrets.TODOIST_API_KEY }}
 
-      - name: Regenerate leaderboard.html
-        run: python leaderboard.py
-
       - name: Commit updated leaderboard
         run: |
           git config --global user.name "GitHub Actions"
