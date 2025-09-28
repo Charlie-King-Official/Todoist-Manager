@@ -1,8 +1,8 @@
-name: Update Leaderboard Every 2 Minutes
+name: Update Leaderboard Every 5 Minutes
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # Every 2 minutes
+    - cron: '*/5 * * * *'  # Every 5 minutes
   workflow_dispatch:
 
 jobs:
