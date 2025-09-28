@@ -28,4 +28,6 @@ jobs:
           
       - name: Run script
         run: python refresh_lists.py
+        env:
+          TODOIST_API_KEY: ${{ secrets.TODOIST_API_KEY }}
 
