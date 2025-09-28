@@ -7,6 +7,8 @@
 
 name: Run refresh_lists.py Script
 on:
+  schedule:
+    - cron: '0 5 * * *'  # Runs at 5:00 AM UTC = 1:00 AM ET
   workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
