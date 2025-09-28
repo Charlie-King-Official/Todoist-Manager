@@ -153,7 +153,7 @@ def main():
 </html>
 """
     OUTPUT_PATH.write_text(html, encoding="utf-8")
-    print("scoreboard.html written.")
+    print("index.html written.")
 
 if __name__ == "__main__":
     main()
