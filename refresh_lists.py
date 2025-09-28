@@ -51,7 +51,9 @@ def get_next_due_date(task):
 def update_due_date(task_id, new_date):
     url = f"https://api.todoist.com/rest/v2/tasks/{task_id}"
     data = {"due_date": new_date.strftime("%Y-%m-%d")}
-    res = requests.post(url, headers=headers, json=data)
+    res = requests.put(url, headers=headers, json=data)  # ✅ changed to PUT
+    if res.status_code != 204:
+        print(f"Failed to update task {task_id}: {res.status_code} - {res.text}")
     return res.status_code == 204
 
 # === Main Routine ===
