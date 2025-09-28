@@ -1,0 +1,30 @@
+name: Update Leaderboard Every 2 Minutes
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'  # Every 2 minutes
+  workflow_dispatch:
+
+jobs:
+  regenerate-leaderboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Regenerate leaderboard.html
+        run: python generate_leaderboard.py
+
+      - name: Commit updated leaderboard
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add leaderboard.html
+          git commit -m "Auto-update leaderboard"
+          git push
