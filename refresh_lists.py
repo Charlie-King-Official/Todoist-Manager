@@ -13,7 +13,14 @@ headers = {
 
 # === Get Project ID ===
 def get_project_id(name):
-    res = requests.get("https://api.todoist.com/rest/v2/projects", headers=headers)
+    
+    res = requests.get(url, headers=headers)
+    
+    if res.status_code != 200:
+        print(f"Error: Received status code {res.status_code}")
+        print(f"Response text: {res.text}")
+        return None
+
     for project in res.json():
         if project["name"] == name:
             return project["id"]
