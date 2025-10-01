@@ -168,8 +168,8 @@ def reset_tasks():
         for task in tasks:
             next_due = get_next_due_datetime(task)
             due_string = task.get("due", {}).get("string", "")
+            print(f"{task['content']}-> due: {next_due}, recurrence: {due_string}")
             if next_due and due_string:
-                print(f"{task['content']}-> due: {next_due}, recurrence: {due_string}")
                 if update_due_date(task["id"], next_due, due_string):
                     reset_count += 1
                     print(f"[{project_name}] Rescheduled: {task['content']} → {next_due.date()}")
