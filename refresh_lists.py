@@ -115,7 +115,7 @@ def update_due_date(task_id, new_date: datetime) -> bool:
     without changing its recurrence pattern.
     """
     url = f"https://api.todoist.com/rest/v2/tasks/{task_id}"
-    payload = {"due_date": new_date.strftime("%Y-%m-%d")}
+    payload = {"due_date": new_date.strftime("%Y-%m-%d"), "due_string": "every day"}
     # Todoist expects POST for updates; success returns 204 No Content.
     res = requests.post(url, headers=headers, json=payload)
     if res.status_code not in (204, 200):
