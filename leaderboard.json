@@ -1,12 +1,12 @@
 {
   "points": {
+    "Julia": 0,
+    "Chris": 0
+  },
+  "previous_points": {
     "Julia": 56,
     "Chris": 69
   },
-  "previous_points": {
-    "Julia": 81,
-    "Chris": 77
-  },
-  "last_sync": "2025-10-10T11:40:42Z",
-  "next_reset_utc": "2025-10-11T03:59:59Z"
+  "last_sync": "2025-10-11T03:59:59Z",
+  "next_reset_utc": "2025-10-18T03:59:59Z"
 }
