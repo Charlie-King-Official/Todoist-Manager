@@ -110,16 +110,16 @@
 <body>
   <div class="wrap">
     <h1>Weekly Chore Leaderboard</h1>
-    <div class="meta">Updated 1 day ago • Next reset: Fri, Dec 5 11:59 PM ET</div>
+    <div class="meta">Updated 20 min ago • Next reset: Fri, Dec 5 11:59 PM ET</div>
     <div class="grid">
       <div class="card julia">
         <div class="name">Julia</div>
-        <div class="score">1</div>
+        <div class="score">9</div>
         <div class="sub">Previous week: 5</div>
       </div>
       <div class="card chris">
         <div class="name">Chris</div>
-        <div class="score">0</div>
+        <div class="score">7</div>
         <div class="sub">Previous week: 11</div>
       </div>
     </div>
@@ -132,8 +132,8 @@
   </div>
   <script>
     (function() {
-      const julia = 1;
-      const chris = 0;
+      const julia = 9;
+      const chris = 7;
       const total = Math.max(julia + chris, 1);
       const pct = Math.round((julia / total) * 100);
       document.querySelector('.bar').style.width = pct + '%';
