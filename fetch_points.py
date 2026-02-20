@@ -27,7 +27,7 @@ HEADERS = {
 
 # Updated endpoint (API v1)
 COMPLETED_URL = "https://api.todoist.com/api/v1/tasks/completed"
-REST_PROJECTS_URL = "https://api.todoist.com/rest/v2/projects"
+REST_PROJECTS_URL = "https://api.todoist.com/rest/v1/projects"
 
 NY_TZ = ZoneInfo("America/New_York")
 
